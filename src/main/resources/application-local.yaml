@@ -3,3 +3,10 @@ spring:
     url: jdbc:postgresql://localhost:5434/order_db
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:postgres}
+
+application:
+  config:
+    user-service-url: http://localhost:8080
+
+jwt:
+  secret: ${JWT_SECRET:123456789123456789123456789123456789}

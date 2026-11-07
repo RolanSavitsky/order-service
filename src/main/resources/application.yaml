@@ -6,3 +6,21 @@ spring:
     name: order-service
   profiles:
     default: local
+
+  jpa:
+    properties:
+      hibernate:
+        default_batch_fetch_size: 20
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      UserServiceCB:
+        sliding-window-size: 10
+        minimum-number-of-calls: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+        ignore-exceptions:
+          - feign.FeignException.Unauthorized
+          - feign.FeignException.Forbidden
+          - feign.FeignException.NotFound
