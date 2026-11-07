@@ -1,6 +1,7 @@
 package com.inno.orderservice.specification;
 
 import com.inno.orderservice.entity.Order;
+import com.inno.orderservice.entity.OrderStatus;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
 
@@ -11,7 +12,7 @@ public class OrderSpecification {
 
     public static Specification<Order> filter(LocalDateTime createdFrom,
                                               LocalDateTime createdTo,
-                                              List<String> statuses) {
+                                              List<OrderStatus> statuses) {
 
         return (root, query, criteriaBuilder) -> {
             Predicate predicate = criteriaBuilder.conjunction();
