@@ -34,6 +34,7 @@ public class ItemService {
                 .toList();
     }
 
+    @Transactional
     public ItemResponse updateItem(Long id, ItemRequest request) {
         Item item = findItem(id);
         itemMapper.updateEntity(request, item);
