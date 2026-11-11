@@ -1,0 +1,12 @@
+target/
+
+.git/
+.gitignore
+.gitattributes
+
+.idea/
+
+README.md
+HELP.md
+
+src/test/
