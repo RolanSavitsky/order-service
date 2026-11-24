@@ -2,10 +2,10 @@ package com.inno.orderservice.client;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.http.HttpHeaders;
 
 @Component
 public class FeignAuthInterceptor implements RequestInterceptor {

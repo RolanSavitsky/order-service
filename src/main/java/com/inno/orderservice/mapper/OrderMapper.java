@@ -1,6 +1,10 @@
 package com.inno.orderservice.mapper;
 
-import com.inno.orderservice.dto.*;
+import com.inno.orderservice.dto.OrderItemRequest;
+import com.inno.orderservice.dto.OrderItemResponse;
+import com.inno.orderservice.dto.OrderRequest;
+import com.inno.orderservice.dto.OrderResponse;
+import com.inno.orderservice.dto.UpdateOrderRequest;
 import com.inno.orderservice.entity.Order;
 import com.inno.orderservice.entity.OrderItem;
 import org.mapstruct.Mapper;
